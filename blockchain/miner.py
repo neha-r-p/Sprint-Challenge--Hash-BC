@@ -26,12 +26,12 @@ def proof_of_work(last_proof):
     proof = 0
     #  TODO: Your code here
     #get hash of last_proof
-    raw_last_hash = hashlib.sha256(f'last_proof'.encode())
+    raw_last_hash = hashlib.sha256(f'{last_proof}'.encode())
     last_hash = raw_last_hash.hexdigest()
 
     while valid_proof(last_hash, proof) is False:
         #add random amount to proof?
-        proof += random.randint(1,101)
+        proof += random.randint(1,923)
 
     print("Proof found: " + str(proof) + " in " + str(timer() - start))
     return proof
