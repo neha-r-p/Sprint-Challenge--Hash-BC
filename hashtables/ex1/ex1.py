@@ -14,9 +14,9 @@ def get_indices_of_item_weights(weights, length, limit):
         hash_table_insert(ht, weights[i], i)
 
     for i in range(0, len(weights)):
-         #retrieve first weight
+        #retrieve first weight
         weight1 = weights[i]
-         #subtract weight from limit
+        #subtract weight from limit
         weight2 = limit - weight1
         weight2_in_table = hash_table_retrieve(ht, weight2)
         #check to see if the other weight exists in table
